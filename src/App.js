@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import BannerCarousel from './components/BannerCarousel/BannerCarousel'
+import SearchBar from './components/SearchBar/SearchBar';
+import Counter from './components/Counter/Counter'
+import Products from './components/Products/Products';
+import { SearchContext } from './searchContext';
+import { useState } from 'react';
 function App() {
+  const [searchItem, setSearchItem] = useState('')
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SearchContext.Provider value={{ searchItem, setSearchItem }}>
+      <SearchBar />
+      <BannerCarousel />
+      <Counter seconds="20" minutes="20" />
+      <Products />
+    </SearchContext.Provider>
   );
 }
 
