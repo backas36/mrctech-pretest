@@ -15,4 +15,4 @@
           - PopUp 點擊產品彈窗功能
         - GoTop 回上方功能
       
-[Demo]([https://linktodocumentation](https://backas36.github.io/mrctech-pretest))
+[Demo](https://backas36.github.io/mrctech-pretest)
