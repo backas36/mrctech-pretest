@@ -6,24 +6,24 @@ import ProductsList from "./ProductsList"
 
 const categories = [
   {
-    title: '01 - 10',
+    title: '01 - 30',
     start: 0,
-    end: 39
-  },
-  {
-    title: '11 - 20',
-    start: 10,
-    end: 19
-  },
-  {
-    title: '21 - 30',
-    start: 20,
     end: 29
   },
   {
-    title: '31 - 40',
+    title: '31 - 60',
     start: 30,
-    end: 39
+    end: 59
+  },
+  {
+    title: '61 - 90',
+    start: 60,
+    end: 89
+  },
+  {
+    title: '91 - 120',
+    start: 90,
+    end: 119
   },
 ]
 
@@ -67,7 +67,7 @@ const Products = () => {
     const fetchingItems = async (filter) => {
       try {
         const result = await fetchAPI();
-        const getAllItems = result.slice(0, 39);
+        const getAllItems = result.slice(0, 119);
         if (!searchItem) {
           const { start, end } = filter
 
